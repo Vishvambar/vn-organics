@@ -27,6 +27,27 @@ nav {
     /* Ensure z-index is not affecting layout */
 }
 
+.main-footer {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Changed from sticky or fixed to relative */
+    top: auto;
+    /* No need to set top position if using relative */
+    z-index: auto;
+    /* Ensure z-index is not affecting layout */
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+}
+
 .logo a {
     color: #FFA726;
     font-size: 24px;
@@ -78,7 +99,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 400px);
     background-color: #1F2020;
     padding: 0 50px;
 }
@@ -145,18 +166,18 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: #1F2020;
 }
 
 .categories-heading {
     width: 100%;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
     /* Adjust size as needed */
     color: white;
     /* Adjust color to match your design */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     /* Space between heading and cards */
 }
 
@@ -166,7 +187,7 @@ nav {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    flex-basis: 23%;
+    flex-basis: 15%;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -204,7 +225,7 @@ nav {
 
 .more-button {
     display: block;
-    padding: 10px 20px;
+    padding: 6px 20px;
     margin-right: 1.5%;
     background-color: #FFA726;
     /* Example color */
@@ -249,7 +270,7 @@ nav {
 
 .left-section {
     width: 22%;
-    background-color: #5e5b5b;
+    background-color: transparent;
     border-radius: 8px;
 }
 
@@ -277,7 +298,7 @@ nav {
 
 .offer-item img {
     width: 100%;
-    height:auto;
+    height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
 }
@@ -414,9 +435,7 @@ h2 {
     display: block;
 }
 
-.product-footer-main {
-    /* border:2px solid red; */
-}
+
 
 .trending-product-footer {
     /* border: 2px solid green; */
@@ -449,11 +468,11 @@ h2 {
 
 .inline-div-block {
     display: flex;
-align-items: center;
-justify-content: space-between;
-/* border:2px solid red; */
-width: 65%;
-margin-left: 15%;
+    align-items: center;
+    justify-content: space-between;
+    /* border:2px solid red; */
+    width: 65%;
+    margin-left: 15%;
 }
 
 
@@ -502,7 +521,7 @@ margin-left: 15%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 40px 20px;
+        padding: 20px 20px;
         background-color: #1F2020;
     }
 
@@ -581,7 +600,7 @@ margin-left: 15%;
 @media (max-width: 768px) {
     .hero-section {
         padding: 0 20px;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 400px);
         /* Adjust for nav bar */
     }
 
@@ -782,4 +801,68 @@ margin-left: 15%;
         background-color: #FF9800;
         /* Darker shade for hover effect */
     }
+
+
+
+    .footer-logo {
+        display: none;
+    }
+
+    .copyright {
+        font-size: 0.7rem;
+    }
+
+    .footer-nav-links {
+
+        list-style: none;
+        display: flex;
+    }
+
+    .footer-nav-links li {
+        margin: 0 0;
+    }
+
+    .footer-nav-links li a {
+
+        color: #fff;
+        text-decoration: none;
+        font-size: 10px;
+        /* padding: 8px 12px; */
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-section {
+        flex-direction: column;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .left-section,
+    .right-sections {
+        width: 100%;
+        /* Take up full width on small screens */
+        padding: 10px;
+    }
+
+    .right-sections {
+        flex-direction: column;
+        gap: 10px;
+        /* Reduce gap between right sections */
+    }
+
+    .left-section .offer-card1 {
+        display: none;
+    }
+
+    .custom-section h2 {
+        font-size: 1.2em;
+        /* Slightly smaller headings */
+    }
+
+    .custom-section p {
+        font-size: 0.9em;
+        /* Slightly smaller text */
+    }
+
+
 }
